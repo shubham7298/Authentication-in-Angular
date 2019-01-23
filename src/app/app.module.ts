@@ -11,6 +11,18 @@ import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminModule } from './admin/admin.module';
 import { LoginComponent } from './login/login.component';
+import { ButtonComponent } from './button/button.component';
+import { ClickMeComponent } from './button/click-me.component';
+import { ClickMe2Component } from './button/click-me2.component';
+import {
+  KeyUpComponent_v1,
+  KeyUpComponent_v2,
+  KeyUpComponent_v3,
+  KeyUpComponent_v4
+} from './button/keyup.components';
+import { LittleTourComponent } from './button/little-tour.component';
+import { LoopbackComponent } from './button/loop-back.component';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +33,16 @@ import { LoginComponent } from './login/login.component';
     ContactComponent,
     AboutComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    ButtonComponent,
+    ClickMeComponent,
+    ClickMe2Component,
+    KeyUpComponent_v1,
+    KeyUpComponent_v2,
+    KeyUpComponent_v3,
+    KeyUpComponent_v4,
+    LittleTourComponent,
+    LoopbackComponent
   ],
   imports: [
     BrowserModule,
