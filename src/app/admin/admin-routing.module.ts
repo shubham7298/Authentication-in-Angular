@@ -5,7 +5,7 @@ import { ProjectComponent } from './project/project.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectCreateComponent } from './project-create/project-create.component';
 import { ProjectUpdateComponent } from './project-update/project-update.component';
-
+import { LoginComponent } from '../admin/login/login.component';
 
 const routes: Routes = [
     {
@@ -15,7 +15,7 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: ProjectListComponent
-            },            
+            },
             {
                 path: 'create',
                 component: ProjectCreateComponent
@@ -23,6 +23,10 @@ const routes: Routes = [
             {
                 path: 'update',
                 component: ProjectUpdateComponent
+            },
+            {
+                path: 'login',
+                component: LoginComponent
             }
         ]
     }
@@ -30,7 +34,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class AdminRoutingModule { }

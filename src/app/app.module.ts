@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminModule } from './admin/admin.module';
-import { LoginComponent } from './login/login.component';
+//import { LoginComponent } from './admin/login/login.component';
 import { ButtonComponent } from './button/button.component';
 import { ClickMeComponent } from './button/click-me.component';
 import { ClickMe2Component } from './button/click-me2.component';
@@ -24,6 +26,16 @@ import { LittleTourComponent } from './button/little-tour.component';
 import { LoopbackComponent } from './button/loop-back.component';
 
 
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyA---Ji1Kg4wiPLdyQzLeIBpxquK-xvw78",
+  authDomain: "angular-learn-8c93c.firebaseapp.com",
+  databaseURL: "https://angular-learn-8c93c.firebaseio.com",
+  projectId: "angular-learn-8c93c",
+  storageBucket: "angular-learn-8c93c.appspot.com",
+  messagingSenderId: "395325510451"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +45,7 @@ import { LoopbackComponent } from './button/loop-back.component';
     ContactComponent,
     AboutComponent,
     AdminComponent,
-    LoginComponent,
+    //LoginComponent,
     ButtonComponent,
     ClickMeComponent,
     ClickMe2Component,
@@ -45,6 +57,8 @@ import { LoopbackComponent } from './button/loop-back.component';
     LoopbackComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
     BrowserModule,
     AppRoutingModule,
     AdminModule
