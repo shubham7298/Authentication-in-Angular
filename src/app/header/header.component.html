@@ -18,6 +18,10 @@
       <li>
         <a class="nav-link" routerLink="/button">Button</a>
       </li>
+      <li *ngIf="authService.isLoggedIn" class="nav-item">
+        <a class="nav-link" (click)="authService.logout()">Logout</a>
+      </li>
+
     </ul>
   </div>
 </nav>
